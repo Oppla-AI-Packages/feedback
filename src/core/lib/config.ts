@@ -18,5 +18,6 @@ export const websiteMetaData = {
     url: "https://oppla.ai"
 }
 
-export const serverUrl = 'https://app.oppla.ai/api'
+// export const serverUrl = 'https://app.oppla.ai/api'
+export const serverUrl = "https://prodio.dev/api"
 // export const serverUrl = "https://bjvkq9mg-3000.inc1.devtunnels.ms/api"
