@@ -1,6 +1,6 @@
 {
-    "name": "@crazy-web/feedback",
-    "version": "3.0.2",
+    "name": "@oppla-ai/feedback",
+    "version": "1.0.0",
     "description": "A feedback form handler package that shows a popup based on allowed URLs.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -24,7 +24,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/rishabh-werbooz/feedback-demo.git"
+        "url": "git+https://github.com/Oppla-AI-Packages/feedback.git"
     },
     "publishConfig": {
         "access": "public"
