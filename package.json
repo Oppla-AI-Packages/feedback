@@ -1,6 +1,6 @@
 {
     "name": "@oppla-ai/feedback",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A feedback form handler package that shows a popup based on allowed URLs.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
