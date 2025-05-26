@@ -19,7 +19,7 @@ export const ideasContainer = async (data: any, selectedCard: any) => {
 
 
   const container = document.createElement("div");
-  container.className = "prodio-feedback-hidden-scrollbar";
+  container.className = "oppla-ai-feedback-hidden-scrollbar";
   // container.style.cssText = "display:flex;flex-direction:column;gap:15px;overflow-y:auto;padding:1px;height:500px";
   container.style.overflowY = "auto"
   container.style.display = "flex"
@@ -35,8 +35,8 @@ export const ideasContainer = async (data: any, selectedCard: any) => {
   container.appendChild(ideaForm)
 
 
-  const prodioTabContent = document.getElementById("prodio-tab-content")
-  prodioTabContent?.appendChild(container)
+  const opplaaiTabContent = document.getElementById("oppla-ai-tab-content")
+  opplaaiTabContent?.appendChild(container)
 
   const fields = ["slider-title", "slider-type", "slider-description"];
 
@@ -94,16 +94,16 @@ export const renderIdeaForm = (data: any) => {
   const fieldTextColor = isDarkMode ? "#FAFAFA" : "#303540";
   const fieldBorder = isDarkMode ? "1px solid #52526F40" : "1px solid #E5E7EB";
 
-  // <span class="prodio-feedback-form-description" style="color:#4747474">${description}</span>
+  // <span class="oppla-ai-feedback-form-description" style="color:#4747474">${description}</span>
 
   return `
-   <div id="form-container" class="prodio-feedback-form-container" style="position: relative;">
+   <div id="form-container" class="oppla-ai-feedback-form-container" style="position: relative;">
       <span id="close-form-btn" type="button" style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; cursor: pointer; font-size: 16px;">
         ${renderCloseIcon({size:"20px",stroke: isDarkMode ? "#9FA1A7" : "#718096"})}
       </span>
 
       <div id="feedback-form" style="display:flex;flex-direction:column;gap:15px;">
-        <h2 class="prodio-feedback-form-heading" style="color:${isDarkMode ? "#D2D3E0" : "#303540"};font-weight:bold;margin:0px;padding:0px;">${title}</h2>
+        <h2 class="oppla-ai-feedback-form-heading" style="color:${isDarkMode ? "#D2D3E0" : "#303540"};font-weight:bold;margin:0px;padding:0px;">${title}</h2>
         <hr style="height:0.2px;border:none; background: ${isDarkMode ? "#313337" : "#31333740"};"/>
 
         <div style="display: flex; flex-direction: column; gap: 8px;border-radius:2px;width: 100%;">
@@ -229,7 +229,7 @@ export const submitIdea = ({ orgData, primaryColor,isDarkMode }: { orgData?: any
 
     submitButton.disabled = true;
       
-    submitButton.classList.add("prodio-disabled-btn"); 
+    submitButton.classList.add("oppla-ai-disabled-btn"); 
     
     const website = window.location.hostname
 
@@ -268,7 +268,7 @@ export const submitIdea = ({ orgData, primaryColor,isDarkMode }: { orgData?: any
     }
 
     submitButton.disabled = false;
-    submitButton.classList.remove("prodio-disabled-btn");
+    submitButton.classList.remove("oppla-ai-disabled-btn");
 
   });
 }
@@ -281,7 +281,7 @@ export const submitIdea = ({ orgData, primaryColor,isDarkMode }: { orgData?: any
 //     let hasMoreData = true;
 //     let isListenerAdded = false;
 
-//     const container = document.querySelector(".prodio-feedback-hidden-scrollbar");
+//     const container = document.querySelector(".oppla-ai-feedback-hidden-scrollbar");
 //     const feedbackContainer = document.getElementById("feedback-list")
 //     if (!container || !feedbackContainer) return;
 
@@ -345,7 +345,7 @@ export async function renderFeedbacks(accountId: string,websiteId:string, resetD
     let hasMoreData = true;
     let isFirstLoad = true; // Flag to track first load
 
-    const container = document.querySelector(".prodio-feedback-hidden-scrollbar");
+    const container = document.querySelector(".oppla-ai-feedback-hidden-scrollbar");
     const feedbackContainer = document.getElementById("feedback-list");
     if (!container || !feedbackContainer) return;
 
@@ -358,8 +358,8 @@ export async function renderFeedbacks(accountId: string,websiteId:string, resetD
 
     if (isFirstLoad) {
       feedbackContainer.innerHTML = `
-        <div class="prodio-spinner-container">
-          <div class="prodio-spinner"></div>
+        <div class="oppla-ai-spinner-container">
+          <div class="oppla-ai-spinner"></div>
         </div>
       `;
     }
@@ -431,7 +431,7 @@ export async function renderFeedbacks(accountId: string,websiteId:string, resetD
         currentPage++;
       } else {
         if (currentPage === 1) {
-          feedbackContainer.innerHTML = `<div class="prodio-no-data">No ideas found.</div>`;
+          feedbackContainer.innerHTML = `<div class="oppla-ai-no-data">No ideas found.</div>`;
         }
         hasMoreData = false;
       }
@@ -486,7 +486,7 @@ export const manageSubmitANewIdeaButton = () => {
         reopenFormBtn.style.boxShadow = "0 4px 14px rgba(79, 70, 229, 0.3)";
       });
 
-      const scrollableDiv = document.querySelector(".prodio-feedback-hidden-scrollbar");
+      const scrollableDiv = document.querySelector(".oppla-ai-feedback-hidden-scrollbar");
       // Scroll event to show/hide reopenFormBtnContainer based on scroll height
       if (scrollableDiv) {
         scrollableDiv.addEventListener("scroll", function () {

@@ -8,9 +8,9 @@ import { openFeedbackSlider } from "./ui/feedbackSlider";
 import { showPopup } from "./ui/popup";
 
 
-export const SessionStorageName = "prodio-feedback"
+export const SessionStorageName = "oppla-ai-feedback"
 
-export const localStorageName = "prodio-feedback-local"
+export const localStorageName = "oppla-ai-feedback-local"
 
 
 export const frequencyTypes = {
@@ -39,7 +39,7 @@ export async function init({ organizationId, websiteId, properties }: { organiza
   }
  
 
-  const requiredFields: (keyof PropertiesType)[] = ["name", "phone_number", "id", "job_title", "email"];
+  const requiredFields: (keyof PropertiesType)[] = ["id", "email"];
   const missingFields = requiredFields.filter(field => !properties[field]);
 
   if (missingFields.length > 0) {

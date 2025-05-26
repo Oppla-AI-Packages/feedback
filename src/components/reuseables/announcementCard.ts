@@ -69,21 +69,21 @@ export const announcementCard = (feed: any, primaryColor: string, isDarkMode: bo
     </div>
 
         
-        <span id="prodio-announcement-description" style="color:${descriptionColor}">${htmlDescription}</span>
+        <span id="oppla-ai-announcement-description" style="color:${descriptionColor}">${htmlDescription}</span>
         
         <button class="toggle-comment-box" style="padding: 6px 10px; font-size: 14px; border: none; background-color: ${primaryColor}; color: white; border-radius: 5px; width: max-content; cursor: pointer;">
             Leave a comment
         </button>
 
         <div class="comment-box" style="display: none; flex-direction: column; gap: 20px;">
-            <select class="prodio-announcement-comment-type" style="height:30px;padding: 6px 8px;font-size:12px; border-radius: 5px; background: ${fieldBg}; color: ${fieldTextColor}; border:${fieldBorder};">
+            <select class="oppla-ai-announcement-comment-type" style="height:30px;padding: 6px 8px;font-size:12px; border-radius: 5px; background: ${fieldBg}; color: ${fieldTextColor}; border:${fieldBorder};">
                 ${FeedbackTypesArray.map((option: any) => (
         `<option value="${option?.value}">${option?.label}</option>`
     )).join("")}
             </select>
-            <input type="text" class="prodio-announcement-comment-title" placeholder="Add a comment..." style="padding: 6px 8px;font-size:12px; border-radius: 5px; background: ${fieldBg}; color: ${fieldTextColor};border:${fieldBorder};" />
+            <input type="text" class="oppla-ai-announcement-comment-title" placeholder="Add a comment..." style="padding: 6px 8px;font-size:12px; border-radius: 5px; background: ${fieldBg}; color: ${fieldTextColor};border:${fieldBorder};" />
             <div style="display: flex; gap: 10px;">
-                <button class="prodio-announcement-comment-submit" style="padding: 5px 20px; background-color: ${primaryColor}; color: white; border: none; border-radius: 5px; font-size: 14px; cursor: pointer;">Submit</button>
+                <button class="oppla-ai-announcement-comment-submit" style="padding: 5px 20px; background-color: ${primaryColor}; color: white; border: none; border-radius: 5px; font-size: 14px; cursor: pointer;">Submit</button>
                 <button class="cancel-comment" style="padding: 5px 20px; background-color: #ccc; color: black; border: none; border-radius: 5px; font-size: 14px; cursor: pointer;">Cancel</button>
             </div>
         </div>

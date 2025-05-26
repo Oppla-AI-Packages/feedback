@@ -55,7 +55,7 @@ export function showPopup(matchedOrg: any): void {
   const renderWhiteLabel = () => {
     if(!whiteLabel) {
       return `${whiteLabelRender({})}`
-      // return `<a style="font-size:9px;color:#39C3EF;text-align:right;text-decoration:none;" href="https://prodio.app" target="_blank">Powered by Prodio</a>`
+      // return `<a style="font-size:9px;color:#39C3EF;text-align:right;text-decoration:none;" href="https://oppla-ai.app" target="_blank">Powered by oppla-ai</a>`
     } else {
       return `<span style="display:none;"></span>`
     }
@@ -66,23 +66,23 @@ export function showPopup(matchedOrg: any): void {
 const addStyles = () => {
   const styleElement = document.createElement("style");
   styleElement.innerHTML = `
-    .prodio-feedback-form-heading {
+    .oppla-ai-feedback-form-heading {
       font-size: 27px;
       margin: 0;
     }
 
     @media screen and (max-width: 700px) {
-      .prodio-feedback-form-heading {
+      .oppla-ai-feedback-form-heading {
         font-size: 20px;
       }
     }
 
-    .prodio-feedback-form-description {
+    .oppla-ai-feedback-form-description {
       font-size: 14px;
     }
 
     @media screen and (max-width: 700px) {
-      .prodio-feedback-form-description {
+      .oppla-ai-feedback-form-description {
         font-size: 12px;
       }
     }
@@ -95,7 +95,7 @@ const addStyles = () => {
 const removeStyles = () => {
   const styles = document.head.getElementsByTagName("style");
   for (let i = 0; i < styles.length; i++) {
-    if (styles[i].innerHTML.includes(".prodio-feedback")) {
+    if (styles[i].innerHTML.includes(".oppla-ai-feedback")) {
       styles[i].remove();
       break;
     }
@@ -104,8 +104,8 @@ const removeStyles = () => {
 
 
   popup.innerHTML = `
-    <h2 class="prodio-feedback-form-heading">${title}</h2>
-    <span class="prodio-feedback-form-description">${description}</span>
+    <h2 class="oppla-ai-feedback-form-heading">${title}</h2>
+    <span class="oppla-ai-feedback-form-description">${description}</span>
 
     <div style="display: flex; flex-direction: column; gap: 8px; width: 100%;">
       <label for="popup-type" style="display: block; text-align: left; color: ${labelColor};font-size:12px;">Type *</label>
@@ -232,7 +232,7 @@ const removeStyles = () => {
           errorSpan.style.display = "block";
         } else {
           popup.innerHTML = `
-            <h2 class="prodio-feedback-form-heading" style="text-align:center;">Thank you for your feedback</h2>
+            <h2 class="oppla-ai-feedback-form-heading" style="text-align:center;">Thank you for your feedback</h2>
             <div style="display:flex;justify-content:center;margin-top:20px;">
               <button id="done-button" style="padding: 5px 20px; background-color: ${primaryColor}; border: none; border-radius: 5px; color: #fff; font-size: 14px; cursor: pointer;">
                 Done

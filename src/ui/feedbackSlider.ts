@@ -46,7 +46,7 @@ export async function openFeedbackSlider(data: any): Promise<void> {
   overlay.style.zIndex = "9999998";
 
   const slider = document.createElement("div");
-  slider.id = "prodio-slider";
+  slider.id = "oppla-ai-slider";
   slider.style.display = "flex";
   slider.style.flexDirection = "column";
   slider.style.gap = "12px";
@@ -75,7 +75,7 @@ export async function openFeedbackSlider(data: any): Promise<void> {
 
     return `
     <div style="border-bottom:1px solid ${bottomBorderColor};color:white;position:fixed;top:0;width:400px;display:flex;justify-content:space-between;align-items:center;padding:20px 20px; margin: 0px -15px;z-index:10;">
-    <h3 class="prodio-feedback-form-heading" style="margin: 0; padding: 4px 12px;border-radius:5px; background-color:${headingBgColor}; color:${headingTextColor};font-size:16px;">
+    <h3 class="oppla-ai-feedback-form-heading" style="margin: 0; padding: 4px 12px;border-radius:5px; background-color:${headingBgColor}; color:${headingTextColor};font-size:16px;">
       ${heading}
     </h3> 
     <span id="slider-close-button" style="cursor: pointer;z-index: 25; width: max-content;">
@@ -94,7 +94,7 @@ export async function openFeedbackSlider(data: any): Promise<void> {
 
 
     /* Loader Container */
-.prodio-spinner-container {
+.oppla-ai-spinner-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,7 +104,7 @@ export async function openFeedbackSlider(data: any): Promise<void> {
 }
 
 /* Spinner Animation */
-.prodio-spinner {
+.oppla-ai-spinner {
   width: 30px;
   height: 30px;
   border: 4px solid rgba(0, 0, 0, 0.1);
@@ -119,7 +119,7 @@ export async function openFeedbackSlider(data: any): Promise<void> {
 }
 
 /* No Data Found Message */
-.prodio-no-data {
+.oppla-ai-no-data {
   text-align: center;
   font-size: 14px;
   color: #999;
@@ -151,12 +151,12 @@ export async function openFeedbackSlider(data: any): Promise<void> {
   }
 }
 
-.prodioHideSlider {
+.oppla-aiHideSlider {
   animation: slideOut 0.5s ease-in-out forwards !important;
 }
 
 
-    .prodio-feedback-hidden-scrollbar {
+    .oppla-ai-feedback-hidden-scrollbar {
   overflow-y: auto;
   max-height: 100vh;
   scrollbar-width: none;  /* Firefox */
@@ -164,21 +164,21 @@ export async function openFeedbackSlider(data: any): Promise<void> {
 }
 
 /* Hide scrollbar for WebKit (Chrome, Safari) */
-.prodio-feedback-hidden-scrollbar::-webkit-scrollbar {
+.oppla-ai-feedback-hidden-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
 
-.prodio-ideas-card-comment-text{
+.oppla-ai-ideas-card-comment-text{
 opacity:0;
 }
 
-.prodio-feedback-card-animate:hover .prodio-ideas-card-comment-text{
+.oppla-ai-feedback-card-animate:hover .oppla-ai-ideas-card-comment-text{
     opacity:1;
 }
 
 
-.prodio-feedback-card-description{
+.oppla-ai-feedback-card-description{
   display: -webkit-box;
   -webkit-line-clamp: 3; /* Limits text to 3 lines */
   -webkit-box-orient: vertical;
@@ -189,28 +189,28 @@ opacity:0;
 }
 
 
-  .prodio-feedback-card-detail-title{
+  .oppla-ai-feedback-card-detail-title{
     text-decoration:none;
   font-size:17px;
   color:#424242;
   }
 
-.prodio-feedback-card-title {
+.oppla-ai-feedback-card-title {
   max-width: 280px; /* Adjust width based on your layout */
   font-size:17px;
   color:#347151;
 }
 
-.prodio-idea-comment-container:hover .prodio-idea-comment-delete-icon{
+.oppla-ai-idea-comment-container:hover .oppla-ai-idea-comment-delete-icon{
     display:block
 }
 
-.prodio-idea-comment-delete-icon{
+.oppla-ai-idea-comment-delete-icon{
     display:none
 }
 
 
-      .prodio-feedback-form-container{
+      .oppla-ai-feedback-form-container{
         background-color: transparent;
         padding:15px;
         border-radius:5px;
@@ -218,23 +218,23 @@ opacity:0;
         border:1px solid ${isDarkMode ? "#313337" : "#31333740"};
       }
 
-      .prodio-feedback-form-heading {
+      .oppla-ai-feedback-form-heading {
         font-size: 16px;
         margin: 0;
       }
   
       @media screen and (max-width: 700px) {
-        .prodio-feedback-form-heading {
+        .oppla-ai-feedback-form-heading {
           font-size: 16px;
         }
       }
   
-      .prodio-feedback-form-description {
+      .oppla-ai-feedback-form-description {
         font-size: 16px;
       }
   
       @media screen and (max-width: 700px) {
-        .prodio-feedback-form-description {
+        .oppla-ai-feedback-form-description {
           font-size: 12px;
         }
       }
@@ -251,12 +251,12 @@ opacity:0;
   }
 }
 
-.prodio-feedback-card-animate {
+.oppla-ai-feedback-card-animate {
   animation: fadeIn 0.4s ease-out forwards;
 }
 
 
-.prodio-tab-btn{
+.oppla-ai-tab-btn{
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -269,11 +269,11 @@ opacity:0;
     border-radius:5px;
 }
 
-.prodio-tab-btn:hover {
+.oppla-ai-tab-btn:hover {
 background-color:rgba(236,236,236,0.5)
 }
 
-.prodio-disabled-btn {
+.oppla-ai-disabled-btn {
   cursor: not-allowed !important; /* Show disabled cursor */
   opacity: 0.6;
   pointer-events: none; /* Prevent clicks */
@@ -287,7 +287,7 @@ background-color:rgba(236,236,236,0.5)
   const removeStyles = () => {
     const styles = document.head.getElementsByTagName("style");
     for (let i = 0; i < styles.length; i++) {
-      if (styles[i].innerHTML.includes(".prodio-feedback")) {
+      if (styles[i].innerHTML.includes(".oppla-ai-feedback")) {
         styles[i].remove();
         break;
       }
@@ -340,7 +340,7 @@ background-color:rgba(236,236,236,0.5)
 
     slider.innerHTML = selectedCard ? renderFeedbackDetails(selectedCard, data) : `
         ${renderHeader(tabs[selectedTab]?.heading)}
-        <div id="prodio-tab-content">
+        <div id="oppla-ai-tab-content">
         </div>
         <div style="
           position: fixed;
@@ -353,7 +353,7 @@ background-color:rgba(236,236,236,0.5)
         ">
             <div id="tab-container" style="display:grid;grid-template-columns:repeat(${tabsArray.length},1fr);gap:5px;">
                 ${tabsArray.map((tab) => `
-                    <div class="prodio-tab-btn" data-tab="${tab.value}" 
+                    <div class="oppla-ai-tab-btn" data-tab="${tab.value}" 
                         style="
                         color:${selectedTab === tab.value ? tabActiveColor : tabColor};
                         cursor: pointer;
@@ -386,7 +386,7 @@ background-color:rgba(236,236,236,0.5)
 
   // Attach a single event listener to the parent container
   document.addEventListener('click', async (event: any) => {
-    const tabBtn = event.target.closest('.prodio-tab-btn');
+    const tabBtn = event.target.closest('.oppla-ai-tab-btn');
     if (tabBtn) {
       selectedTab = tabBtn.getAttribute('data-tab');
       renderTabs(); // Re-render UI with new tab
@@ -419,7 +419,7 @@ background-color:rgba(236,236,236,0.5)
 
   // Function to close the slider
   const closeSlider = () => {
-    slider.classList.add("prodioHideSlider"); // Add the hide animation class
+    slider.classList.add("oppla-aiHideSlider"); // Add the hide animation class
 
     // Wait for animation to complete before removing
     setTimeout(() => {

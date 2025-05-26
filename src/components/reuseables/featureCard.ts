@@ -12,7 +12,7 @@ export const FeatureCards = (feedback: any, delay: number, usage: string, primar
   if (variant === 1) {
     return `
       <div
-      class="prodio-feedback-card-animate prodio-feedback-card"
+      class="oppla-ai-feedback-card-animate oppla-ai-feedback-card"
       data-feedback='${JSON.stringify(feedback)}'
       style=" 
         border:${cardBorderColor};
@@ -30,7 +30,7 @@ export const FeatureCards = (feedback: any, delay: number, usage: string, primar
             <div style="flex: 1; display: flex; flex-direction: column; gap: 10px;">
               <div style="display:flex;justify-content:space-between;gap:10px;align-items:start;">
                <div style="display: flex; flex-direction:column;gap:5px;">
-                <h3 class=${usage === "card" ? "prodio-feedback-card-title" : "prodio-feedback-card-detail-title"} style="font-weight: 600;font-size:16px; color: ${headingColor}; margin: 0; padding:0; ">
+                <h3 class=${usage === "card" ? "oppla-ai-feedback-card-title" : "oppla-ai-feedback-card-detail-title"} style="font-weight: 600;font-size:16px; color: ${headingColor}; margin: 0; padding:0; ">
                   ${title}
                 </h3>
                 <span style="font-size:10px;color:${descColor}">
@@ -48,7 +48,7 @@ export const FeatureCards = (feedback: any, delay: number, usage: string, primar
       }
               </div>
              
-              <span ${usage === "card" ? 'class="prodio-feedback-card-description"' : ''} style="font-size: 15px; color: ${descColor} !important;line-height: 1.5;">
+              <span ${usage === "card" ? 'class="oppla-ai-feedback-card-description"' : ''} style="font-size: 15px; color: ${descColor} !important;line-height: 1.5;">
                 ${description}
               </span>
             
@@ -64,7 +64,7 @@ export const FeatureCards = (feedback: any, delay: number, usage: string, primar
   if (variant === 2) { 
     return `
     <div
-      class="prodio-feedback-card-animate prodio-feedback-card"
+      class="oppla-ai-feedback-card-animate oppla-ai-feedback-card"
       data-feedback='${JSON.stringify(feedback)}'
       style=" 
         padding: 15px;
@@ -81,7 +81,7 @@ export const FeatureCards = (feedback: any, delay: number, usage: string, primar
         <div style="flex: 1; display: flex; flex-direction: column; gap: 10px;">
              <div style="display:grid;grid-template-columns: 9fr 3fr;gap:10px;align-items:start;">
                 <div style="display: flex; flex-direction:column;gap:5px;">
-                <h3 class=${usage === "card" ? "prodio-feedback-card-title" : "prodio-feedback-card-detail-title"} style="font-weight: 500;font-size:16px; color: ${headingColor}; margin: 0; padding:0; ">
+                <h3 class=${usage === "card" ? "oppla-ai-feedback-card-title" : "oppla-ai-feedback-card-detail-title"} style="font-weight: 500;font-size:16px; color: ${headingColor}; margin: 0; padding:0; ">
                   ${title}
                 </h3>
                 <span  style="font-size:10px;color:${descColor}">${updated_at}</span>
@@ -91,7 +91,7 @@ export const FeatureCards = (feedback: any, delay: number, usage: string, primar
                  </div>
              </div>
 
-             <span class="prodio-feedback-card-description" style="font-size: 15px; color: ${descColor} !important;line-height: 1.5;max-width:100% !important;">
+             <span class="oppla-ai-feedback-card-description" style="font-size: 15px; color: ${descColor} !important;line-height: 1.5;max-width:100% !important;">
                 ${description}
               </span>
 
@@ -110,7 +110,7 @@ export const FeatureCards = (feedback: any, delay: number, usage: string, primar
 
   // ${usage === "card" ?
   //   `
-  //         <span class="prodio-ideas-card-comment-text" style="color:${primaryColor};display:flex;gap:5px;align-items:center;font-size:14px; font-weight:300;">
+  //         <span class="oppla-ai-ideas-card-comment-text" style="color:${primaryColor};display:flex;gap:5px;align-items:center;font-size:14px; font-weight:300;">
   //           ${renderCommentIcn({ stroke: primaryColor })} Add a comment
   //         </span>` : ``}
 
@@ -118,13 +118,13 @@ export const FeatureCards = (feedback: any, delay: number, usage: string, primar
 
   // ${usage === "card" ?
   //   `
-  //             <span class="prodio-ideas-card-comment-text" style="color:${primaryColor};display:flex;gap:5px;align-items:center;font-size:14px; font-weight:300;">
+  //             <span class="oppla-ai-ideas-card-comment-text" style="color:${primaryColor};display:flex;gap:5px;align-items:center;font-size:14px; font-weight:300;">
   //               ${renderCommentIcn({ stroke: primaryColor })} Add a comment
   //             </span>` : ``}
 
   return `
     <div
-      class="prodio-feedback-card-animate prodio-feedback-card"
+      class="oppla-ai-feedback-card-animate oppla-ai-feedback-card"
       data-feedback='${JSON.stringify(feedback)}'
       style=" 
         border-bottom: 1px solid #f1f1f1;
@@ -141,7 +141,7 @@ export const FeatureCards = (feedback: any, delay: number, usage: string, primar
       `
             <div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
               <div style="display:flex;justify-content:space-between;gap:10px;align-items:start;">
-                <h3 class=${usage === "card" ? "prodio-feedback-card-title" : "prodio-feedback-card-detail-title"} style="font-weight: 600; color: #374151; margin: 0; ">
+                <h3 class=${usage === "card" ? "oppla-ai-feedback-card-title" : "oppla-ai-feedback-card-detail-title"} style="font-weight: 600; color: #374151; margin: 0; ">
                   ${title}
                 </h3>
                 ${usage === "card" ?
@@ -162,12 +162,12 @@ export const FeatureCards = (feedback: any, delay: number, usage: string, primar
                   ${FeedbackStatus[status]?.label}
                 </span>
               </div>
-              <span ${usage === "card" ? 'class="prodio-feedback-card-description"' : ''} style="font-size: 15px; color: #474747 !important;line-height: 1.5;">
+              <span ${usage === "card" ? 'class="oppla-ai-feedback-card-description"' : ''} style="font-size: 15px; color: #474747 !important;line-height: 1.5;">
                 ${description}
               </span>
               ${usage === "card" ?
         `
-                  <span class="prodio-ideas-card-comment-text" style="color:${primaryColor};display:flex;gap:5px;align-items:center;font-size:14px; font-weight:300;">
+                  <span class="oppla-ai-ideas-card-comment-text" style="color:${primaryColor};display:flex;gap:5px;align-items:center;font-size:14px; font-weight:300;">
                     ${renderCommentIcn({ stroke: primaryColor })} Add a comment
                   </span>` : ``}
           
@@ -176,7 +176,7 @@ export const FeatureCards = (feedback: any, delay: number, usage: string, primar
       :
       `
         <div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
-            <h3 class=${usage === "card" ? "prodio-feedback-card-title" : "prodio-feedback-card-detail-title"} style="font-weight: 600; color: #374151; margin: 0; ">
+            <h3 class=${usage === "card" ? "oppla-ai-feedback-card-title" : "oppla-ai-feedback-card-detail-title"} style="font-weight: 600; color: #374151; margin: 0; ">
               ${title}
             </h3>
             <span style="background-color:${FeedbackTypes[type]?.color}; color: ${FeedbackTypes[type]?.text}; font-size: 10px; font-weight: 500; padding:3px 10px 2px 10px; border-radius: 16px; text-transform: uppercase; letter-spacing: 0.05em; width:max-content;">
@@ -184,7 +184,7 @@ export const FeatureCards = (feedback: any, delay: number, usage: string, primar
             </span>
             ${usage === "card" ?
             `
-                  <span class="prodio-ideas-card-comment-text" style="color:${primaryColor};display:flex;gap:5px;align-items:center;font-size:14px; font-weight:300;">
+                  <span class="oppla-ai-ideas-card-comment-text" style="color:${primaryColor};display:flex;gap:5px;align-items:center;font-size:14px; font-weight:300;">
                     ${renderCommentIcn({ stroke: primaryColor })} Add a comment
                   </span>` : ``}
               `

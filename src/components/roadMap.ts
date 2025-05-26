@@ -17,7 +17,7 @@ export const roadMapContainer = async (data: any, selectedCard: any) => {
     const accountId = orgData?.organizationId;
     const websiteId = orgData?.websiteId
     const container = document.createElement("div");
-    container.className = "prodio-feedback-hidden-scrollbar";
+    container.className = "oppla-ai-feedback-hidden-scrollbar";
     // container.style.cssText = "display:flex;flex-direction:column;gap:15px;overflow-y:auto;padding:1px;height:500px";
     container.style.overflowY = "auto"
     container.style.display = "flex"
@@ -33,8 +33,8 @@ export const roadMapContainer = async (data: any, selectedCard: any) => {
     container.appendChild(ideaForm)
 
 
-    const prodioTabContent = document.getElementById("prodio-tab-content")
-    prodioTabContent?.appendChild(container)
+    const opplaaiTabContent = document.getElementById("oppla-ai-tab-content")
+    opplaaiTabContent?.appendChild(container)
 
     const fields = ["slider-title", "slider-type", "slider-description"];
 
@@ -73,7 +73,7 @@ export const roadMapContainer = async (data: any, selectedCard: any) => {
 
 
 export async function renderFeedbacks(accountId: string, websiteId: string, resetData: boolean = false, primaryColor: string, isDarkMode: boolean) {
-    const container = document.querySelector(".prodio-feedback-hidden-scrollbar");
+    const container = document.querySelector(".oppla-ai-feedback-hidden-scrollbar");
     const feedbackContainer = document.getElementById("feedback-list");
 
     if (!feedbackContainer) return;
@@ -87,8 +87,8 @@ export async function renderFeedbacks(accountId: string, websiteId: string, rese
     const spinner = document.createElement("div");
     spinner.classList.add("spinner");
     spinner.innerHTML = `
-      <div class="prodio-spinner-container">
-          <div class="prodio-spinner"></div>
+      <div class="oppla-ai-spinner-container">
+          <div class="oppla-ai-spinner"></div>
         </div>
     `;
     feedbackContainer.appendChild(spinner);
@@ -174,7 +174,7 @@ export async function renderFeedbacks(accountId: string, websiteId: string, rese
                 content.appendChild(card);
             });
         } else {
-            content.innerHTML = `<div class="prodio-no-data">No ideas found.</div>`
+            content.innerHTML = `<div class="oppla-ai-no-data">No ideas found.</div>`
         }
 
         // Toggle accordion on click
@@ -249,7 +249,7 @@ export const submitIdea = ({ orgData, primaryColor, isDarkMode }: { orgData?: an
 
         submitButton.disabled = true;
 
-        submitButton.classList.add("prodio-disabled-btn");
+        submitButton.classList.add("oppla-ai-disabled-btn");
 
         const website = window.location.hostname
 
@@ -287,7 +287,7 @@ export const submitIdea = ({ orgData, primaryColor, isDarkMode }: { orgData?: an
         }
 
         submitButton.disabled = false;
-        submitButton.classList.remove("prodio-disabled-btn");
+        submitButton.classList.remove("oppla-ai-disabled-btn");
 
     });
 }

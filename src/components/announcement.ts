@@ -17,7 +17,7 @@ import { checkIsDarkMode } from "./reuseables/checkIsDarkMode";
 
 //     // Create a container div
 //     const container = document.createElement("div");
-//     container.className = "prodio-feedback-hidden-scrollbar";
+//     container.className = "oppla-ai-feedback-hidden-scrollbar";
 //     // container.style.cssText = "display:flex;flex-direction:column;gap:15px;overflow-y:auto;padding:1px;height:500px";
 //     container.style.overflowY = "auto"
 //     container.style.display = "flex"
@@ -66,17 +66,17 @@ import { checkIsDarkMode } from "./reuseables/checkIsDarkMode";
 //     // Append container to body or a specific parent element
 //     // document.body.appendChild(container);
 
-//     const prodioTabContent = document.getElementById("prodio-tab-content")
-//     prodioTabContent?.appendChild(container)
+//     const oppla-aiTabContent = document.getElementById("oppla-ai-tab-content")
+//     oppla-aiTabContent?.appendChild(container)
 
-//     if (prodioTabContent) {
+//     if (oppla-aiTabContent) {
 
-//         prodioTabContent.addEventListener("click", async (event: any) => {
-//             if (event.target.classList.contains("prodio-announcement-comment-submit")) {
+//         oppla-aiTabContent.addEventListener("click", async (event: any) => {
+//             if (event.target.classList.contains("oppla-ai-announcement-comment-submit")) {
 //                 const submitButton = event.target as HTMLButtonElement;
 //                 const card = event.target.closest(".announcement-card");
-//                 const type = card.querySelector(".prodio-announcement-comment-type") as HTMLSelectElement;
-//                 const title = card.querySelector(".prodio-announcement-comment-title") as HTMLInputElement;
+//                 const type = card.querySelector(".oppla-ai-announcement-comment-type") as HTMLSelectElement;
+//                 const title = card.querySelector(".oppla-ai-announcement-comment-title") as HTMLInputElement;
 //                 const comment = title.value.trim();
 //                 const typeValue = type.value.trim();
 
@@ -85,7 +85,7 @@ import { checkIsDarkMode } from "./reuseables/checkIsDarkMode";
 
 //                     // Disable button and show loading state
 //                     submitButton.disabled = true;
-//                     submitButton.classList.add("prodio-disabled-btn");
+//                     submitButton.classList.add("oppla-ai-disabled-btn");
 
 //                     const website = window.location.hostname;
 
@@ -118,7 +118,7 @@ import { checkIsDarkMode } from "./reuseables/checkIsDarkMode";
 
 //                     // Re-enable button and reset text
 //                     submitButton.disabled = false;
-//                     submitButton.classList.remove("prodio-disabled-btn");
+//                     submitButton.classList.remove("oppla-ai-disabled-btn");
 //                 }
 //             }
 //         });
@@ -141,7 +141,7 @@ export const announcementContainer = async (data: any) => {
 
     // Create a container div
     const container = document.createElement("div");
-    container.className = "prodio-feedback-hidden-scrollbar";
+    container.className = "oppla-ai-feedback-hidden-scrollbar";
     container.style.overflowY = "auto";
     container.style.display = "flex";
     container.style.flexDirection = "column";
@@ -151,8 +151,8 @@ export const announcementContainer = async (data: any) => {
 
     // Create loading indicator
     const loadingIndicator = document.createElement("div");
-    loadingIndicator.className = "prodio-spinner-container";
-    loadingIndicator.innerHTML = `<div class="prodio-spinner"></div>`;
+    loadingIndicator.className = "oppla-ai-spinner-container";
+    loadingIndicator.innerHTML = `<div class="oppla-ai-spinner"></div>`;
     container.appendChild(loadingIndicator);
 
     // Function to fetch and append new feeds
@@ -177,7 +177,7 @@ export const announcementContainer = async (data: any) => {
         } else if (currentPage === 1) {
             // If no data and first page, show "No Feeds" message
             const noFeedsMessage = document.createElement("div");
-            noFeedsMessage.className = "prodio-no-data";
+            noFeedsMessage.className = "oppla-ai-no-data";
             noFeedsMessage.textContent = "No feeds available.";
             container.appendChild(noFeedsMessage);
             hasMoreData = false;
@@ -205,16 +205,16 @@ export const announcementContainer = async (data: any) => {
     }, 100);
 
     // Append container to the specified tab content
-    const prodioTabContent = document.getElementById("prodio-tab-content");
-    prodioTabContent?.appendChild(container);
+    const opplaaiTabContent = document.getElementById("oppla-ai-tab-content");
+    opplaaiTabContent?.appendChild(container);
 
-    if (prodioTabContent) {
-        // prodioTabContent.addEventListener("click", async (event: any) => {
-        //     if (event.target.classList.contains("prodio-announcement-comment-submit")) {
+    if (opplaaiTabContent) {
+        // oppla-aiTabContent.addEventListener("click", async (event: any) => {
+        //     if (event.target.classList.contains("oppla-ai-announcement-comment-submit")) {
         //         const submitButton = event.target as HTMLButtonElement;
         //         const card = event.target.closest(".announcement-card");
-        //         const type = card.querySelector(".prodio-announcement-comment-type") as HTMLSelectElement;
-        //         const title = card.querySelector(".prodio-announcement-comment-title") as HTMLInputElement;
+        //         const type = card.querySelector(".oppla-ai-announcement-comment-type") as HTMLSelectElement;
+        //         const title = card.querySelector(".oppla-ai-announcement-comment-title") as HTMLInputElement;
         //         const comment = title.value.trim();
         //         const typeValue = type.value.trim();
 
@@ -223,7 +223,7 @@ export const announcementContainer = async (data: any) => {
 
         //             // Disable button and show loading state
         //             submitButton.disabled = true;
-        //             submitButton.classList.add("prodio-disabled-btn");
+        //             submitButton.classList.add("oppla-ai-disabled-btn");
 
         //             const website = window.location.hostname;
 
@@ -258,13 +258,13 @@ export const announcementContainer = async (data: any) => {
 
         //             // Re-enable button and reset text
         //             submitButton.disabled = false;
-        //             submitButton.classList.remove("prodio-disabled-btn");
+        //             submitButton.classList.remove("oppla-ai-disabled-btn");
         //         }
         //     }
         // });
 
 
-        prodioTabContent.addEventListener("click", async (event: any) => {
+        opplaaiTabContent.addEventListener("click", async (event: any) => {
             const target = event.target;
 
             // Toggle "Leave a comment" form
@@ -286,8 +286,8 @@ export const announcementContainer = async (data: any) => {
                 toggleBtn.textContent = "Leave a comment"; // reset button text
                 toggleBtn.style.display = "inline-block";
 
-                const type = card.querySelector(".prodio-announcement-comment-type") as HTMLSelectElement;
-                const title = card.querySelector(".prodio-announcement-comment-title") as HTMLInputElement;
+                const type = card.querySelector(".oppla-ai-announcement-comment-type") as HTMLSelectElement;
+                const title = card.querySelector(".oppla-ai-announcement-comment-title") as HTMLInputElement;
 
                 // Reset values
                 type.selectedIndex = 0;
@@ -295,11 +295,11 @@ export const announcementContainer = async (data: any) => {
             }
 
             // Submit comment
-            if (target.classList.contains("prodio-announcement-comment-submit")) {
+            if (target.classList.contains("oppla-ai-announcement-comment-submit")) {
                 const submitButton = target;
                 const card = submitButton.closest(".announcement-card");
-                const type = card.querySelector(".prodio-announcement-comment-type") as HTMLSelectElement;
-                const title = card.querySelector(".prodio-announcement-comment-title") as HTMLInputElement;
+                const type = card.querySelector(".oppla-ai-announcement-comment-type") as HTMLSelectElement;
+                const title = card.querySelector(".oppla-ai-announcement-comment-title") as HTMLInputElement;
                 const comment = title.value.trim();
                 const typeValue = type.value.trim();
 
@@ -308,7 +308,7 @@ export const announcementContainer = async (data: any) => {
 
                     // Disable button and show loading state
                     submitButton.disabled = true;
-                    submitButton.classList.add("prodio-disabled-btn");
+                    submitButton.classList.add("oppla-ai-disabled-btn");
 
                     const website = window.location.hostname;
 
@@ -352,7 +352,7 @@ export const announcementContainer = async (data: any) => {
 
                     // Re-enable button
                     submitButton.disabled = false;
-                    submitButton.classList.remove("prodio-disabled-btn");
+                    submitButton.classList.remove("oppla-ai-disabled-btn");
                 }
             }
         });

@@ -31,11 +31,11 @@ export const renderCommentBox = (comment: any, primaryColor?: string, isDarkMode
     return `
     <div 
         style="padding:20px;display:flex;gap:8px; position:relative;background-color:${cardBgColor};border:${cardBorderColor};border-radius:8px;" 
-        class="prodio-feedback-card-animate prodio-idea-comment-container" 
+        class="oppla-ai-feedback-card-animate oppla-ai-idea-comment-container" 
         data-comment-id="${id}"
     >
         ${userData?.id === user_id ? `
-            <span class="prodio-idea-comment-delete-icon" 
+            <span class="oppla-ai-idea-comment-delete-icon" 
                   style="cursor:pointer;position:absolute;top:10px;right:10px;">
                 ${renderCloseIcon({ stroke: isDarkMode ? "#9FA1A7" : "#718096", size: "20" })}
             </span>
@@ -60,9 +60,9 @@ export const renderCommentBox = (comment: any, primaryColor?: string, isDarkMode
 
 export const handleDeleteIdeasComment = (selectedCard: any, primaryColor: string, isDarkMode: boolean) => {
     document.addEventListener("click", (event: any) => {
-        const target = event.target.closest(".prodio-idea-comment-delete-icon");
+        const target = event.target.closest(".oppla-ai-idea-comment-delete-icon");
         if (target) {
-            const commentBox = target.closest(".prodio-idea-comment-container");
+            const commentBox = target.closest(".oppla-ai-idea-comment-container");
             if (commentBox) {
                 commentBox.remove(); // Remove the comment from the UI
                 const commentId = commentBox.getAttribute("data-comment-id"); // Optional: If you have an ID
